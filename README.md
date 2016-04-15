@@ -2,7 +2,7 @@
 Proyecto Contacts Java.
 
 username = esteban0721@hotmail.com
-password = verde0721
+password = esteban123
 
 Estas credenciales serán necesarias para acceder al aplicativo móvil.
 
