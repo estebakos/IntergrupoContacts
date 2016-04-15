@@ -13,7 +13,8 @@ Los servicios Web que se pueden usar son los siguientes:
 
 52.5.56.177:8080/Contacts/rest/contacts
 
-Devuelve la lista de contactos alojados en el servidor
+Devuelve la lista de contactos alojados en el servidor. para seguir actualizando la lista de contactos desde la app
+se puede hacer un swipeGesture de arriba hacia abajo, en caso de que ocurra un problema actualizando.
 
 52.5.56.177:8080/Contacts/rest/contacts/id
 
