@@ -5,5 +5,6 @@ package co.intergrupo.contacts.interfaces;
  */
 public interface LoginListener {
     void onAuthenticate();
+
     void onAuthenticationError(int code);
 }
