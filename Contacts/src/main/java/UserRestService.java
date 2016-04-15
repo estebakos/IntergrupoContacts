@@ -121,12 +121,19 @@ public class UserRestService {
 	// }
 
 	private User getUserByUsername(String username, String password) {
-		InputStream inputStream = getClass().getClassLoader().getResourceAsStream("users.json");
-		String jsonData = readFile(inputStream);
-		User user = new Gson().fromJson(jsonData, User.class);
-		if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-			return user;
-		}
+		
+		FileInputStream inputStream;
+		try {
+			inputStream = new FileInputStream(new File(System.getProperty("user.home") + "/Desktop/users.json"));
+			String jsonData = readFile(inputStream);
+			User user = new Gson().fromJson(jsonData, User.class);
+			if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+				return user;
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
 		return null;
 	}
 
