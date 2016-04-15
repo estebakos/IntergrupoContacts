@@ -98,7 +98,7 @@ public class ContactDetailActivity extends AppCompatActivity implements Contacts
             etAlias.setText(contact.getAlias());
             etCity.setText(contact.getCity());
             etCountry.setText(contact.getCountry());
-            spStates.setSelection(contact.getState());
+            spStates.setSelection(contact.getState() - 1);
         }
     }
 
@@ -114,7 +114,7 @@ public class ContactDetailActivity extends AppCompatActivity implements Contacts
         contact.setPhoneNumber(etPhoneNumber.getText().toString());
         contact.setProfileImage(etImageUrl.getText().toString());
         Picasso.with(this).load(etImageUrl.getText().toString()).placeholder(R.drawable.contacts_icon).error(R.drawable.contacts_icon).fit().centerCrop().into(ivProfilePicture);
-        contact.setState(spStates.getSelectedItemPosition());
+        contact.setState(spStates.getSelectedItemPosition() + 1);
 
         if(dataPreferences.getOfflineContacts().equals(""))
         {

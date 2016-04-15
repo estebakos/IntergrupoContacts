@@ -120,6 +120,12 @@ public class ContactsActivity extends AppCompatActivity implements ContactsListe
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        networkManager.getContacts();
+    }
+
+    @Override
     public void onContactsProblem() {
         Toast.makeText(this, "Tenemos inconvenientes obteniendo la lista de contactos, desliza para reintentar", Toast.LENGTH_LONG).show();
         swipeRefreshLayout.setRefreshing(false);
