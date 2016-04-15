@@ -19,5 +19,5 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="str_rest_server">http://192.168.1.85:8080/JAXRSJsonExample/rest/</string>
+    <string name="str_rest_server">http://52.5.56.177:8080/Contacts/rest/</string>
 </resources>
